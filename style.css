@@ -1,23 +1,25 @@
 body{
     display:flex;
-    height: 80vh;
+    height: 96vh;
+    background-color: rgb(32, 32, 32);
 }
 
 #app{
+    background-color: white;
     width: 512px;
     margin: auto;
-    box-shadow: 4px 4px 30px rgb(156, 156, 156);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 7px;
     width: 200px;
 }
 
 input{
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(48, 175, 248);
     border-radius: 4px;
     outline: none;
+    padding: 7px;
 }
 
 button{
@@ -32,4 +34,8 @@ button{
 
 button:hover{
     opacity: 0.8;
+}
+
+#image{
+    margin-left: 62px;
 }
