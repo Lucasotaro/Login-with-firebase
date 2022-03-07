@@ -32,8 +32,8 @@ function funcCadastrar(){
     <label for="image">Imagem: </label>
     <input type="image" id="image">
 
-    <button onclick="funcVoltar()" type="button" class="btn_lg">Voltar</button>
-    <button type="button" class="btn_nac">New account</button>
+    <button onclick="funcVoltar()" id="btn_lg">Voltar</button>
+    <button id="btn_rg">Register</button>
     </form> `;
 }
 
@@ -45,7 +45,7 @@ function funcVoltar(){
     <label for="password">Senha: </label>
     <input type="password" id="password">
 
-    <button type="button" class="btn_lg">Login</button>
-    <button onclick="funcCadastrar()" type="button" class="btn_nac">New account</button>
+    <button id="btn_lg">Login</button>
+    <button onclick="funcCadastrar()" id="btn_nac">New account</button>
     </form>`;
 }
