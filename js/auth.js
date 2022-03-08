@@ -1,5 +1,5 @@
 login.onsubmit = function(event){
-    document.getElementById("loading").style.display = "block"
+    showItem(loading)
 
     event.preventDefault()
     if(login.btn_lg.innerHTML == "Login"    ){
@@ -18,13 +18,19 @@ login.onsubmit = function(event){
 }
 
 firebase.auth().onAuthStateChanged(function(user){
-    document.getElementById("loading").style.display = "none"
-    
+    hideItem(loading)
+
     if(user){
-        console.log("Usuário autenticado")
-        console.log(user)
+        showUser(user)
     }
     else{
-        console.log("Usuário não autenticado")
+        showAuth()
     }
 })
+
+function signOut(){
+    firebase.auth().signOut().catch(function (error){
+        console.log("Falha ao sair da conta")
+        console.log(error) 
+    })
+}

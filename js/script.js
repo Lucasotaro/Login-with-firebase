@@ -1,4 +1,8 @@
 let login = document.getElementById("login");
+let loading = document.getElementById("loading")
+let auth = document.getElementById("auth")
+let userContent = document.getElementById("userContent")
+let userEmail = document.getElementById("userEmail")
 
 function funcCadastrar(){
     login.innerHTML = `<form id="login">
@@ -48,4 +52,25 @@ function funcVoltar(){
     <button id="btn_lg">Login</button>
     <button onclick="funcCadastrar()" id="btn_nac">New account</button>
     </form>`;
+}
+
+function hideItem(element){
+    element.style.display ="none"
+}
+
+function showItem(element){
+    element.style.display = "block"
+}
+
+function showUser(user){
+    userEmail.innerHTML = user.email
+    hideItem(auth)
+    showItem(userContent)
+}
+
+function showAuth(){
+    login.email.value = ""
+    login.password.value = ""
+    hideItem(userContent)
+    showItem(auth)
 }
