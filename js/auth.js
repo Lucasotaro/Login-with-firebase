@@ -6,6 +6,7 @@ login.onsubmit = function(event){
         firebase.auth().signInWithEmailAndPassword(login.email.value, login.password.value).catch(function(error){
             console.log("Falha no acesso")
             console.log(error)
+            hideItem(loading)
         })
     }
 
@@ -13,6 +14,7 @@ login.onsubmit = function(event){
         firebase.auth().createUserWithEmailAndPassword(login.email.value, login.password.value).catch(function(error){
             console.log("Falha no cadastro")
             console.log(error)
+            hideItem(loading)
         })
     }
 }

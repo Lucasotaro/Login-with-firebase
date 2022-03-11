@@ -2,47 +2,46 @@ let login = document.getElementById("login");
 let loading = document.getElementById("loading")
 let auth = document.getElementById("auth")
 let userContent = document.getElementById("userContent")
-let userEmail = document.getElementById("userEmail")
 
 function funcCadastrar(){
-    login.innerHTML = `<form id="login">
-    <label for="email">Login: </label>
-    <input type="email" id="email">
+    login.innerHTML = `
+    <div><label for="email">Login: </label>
+    <input type="email" id="email"></div>
 
-    <label for="password">Senha: </label>
-    <input type="password" id="password">
+    <div><label for="password">Senha: </label>
+    <input type="password" id="password"></div>
 
-    <label for="name">Nome: </label>
-    <input type="name" id="name">
+    <div><label for="name">Nome: </label>
+    <input type="name" id="name"></div>
 
-    <label for="office">Cargo: </label>
-    <input type="text" id="office">
+    <div><label for="office">Cargo: </label>
+    <input type="text" id="office"></div>
 
-    <label for="facebook">Facebook: </label>
-    <input type="text" id="fb">
+    <div><label for="facebook">Facebook: </label>
+    <input type="text" id="fb"></div>
 
-    <label for="instagram">Instagram: </label>
-    <input type="text" id="ig">
+    <div><label for="instagram">Instagram: </label>
+    <input type="text" id="ig"></div>
 
-    <label for="github">Github: </label>
-    <input type="text" id="gh">
+    <div><label for="github">Github: </label>
+    <input type="text" id="gh"></div>
 
-    <label for="twiter">Twiter: </label>
-    <input type="text" id="tt">
+    <div><label for="twiter">Twiter: </label>
+    <input type="text" id="tt"></div>
 
-    <label for="description">Descrição: </label>
-    <input type="text" id="desc">
+    <div><label for="description">Descrição: </label>
+    <input type="text" id="desc"></div>
 
-    <label for="image">Imagem: </label>
-    <input type="image" id="image">
+    <div><label for="image" id="imageBox">Imagem: </label>
+    <input type="file" id="image" accept="image/png, image/jpeg"></div>
 
-    <button onclick="funcVoltar()" id="btn_lg">Voltar</button>
-    <button id="btn_rg">Register</button>
-    </form> `;
+    <div><button onclick="funcVoltar()" id="btn_bk">Voltar</button>
+    <button id="btn_rg">Register</button></div>
+     `;
 }
 
 function funcVoltar(){
-    login.innerHTML = `<form id="login">
+    login.innerHTML = `
     <label for="email">Login: </label>
     <input type="email" id="email">
 
@@ -51,7 +50,7 @@ function funcVoltar(){
 
     <button id="btn_lg">Login</button>
     <button onclick="funcCadastrar()" id="btn_nac">New account</button>
-    </form>`;
+    `;
 }
 
 function hideItem(element){
@@ -63,7 +62,6 @@ function showItem(element){
 }
 
 function showUser(user){
-    userEmail.innerHTML = user.email
     hideItem(auth)
     showItem(userContent)
 }
