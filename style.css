@@ -15,7 +15,10 @@ body{
 #app{
     background-color: white;
     margin: auto;
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-radius: 7px;
     width: 200px;
 }
@@ -54,4 +57,67 @@ button:hover{
 #gif{
     max-width: 50%;
     max-height: 50%;
+}
+
+#profileContent{
+    position: relative;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px); 
+}
+
+#profile{
+    width: 80px;
+    height: 80px;
+}
+
+#userName{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+#userOffice{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+#userGh{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+#userDesc{
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.a{
+    margin-left: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#social{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.userIg{
+    margin: 2px;
+}
+
+.userFb{
+    margin: 2px;
+}
+
+.userTt{
+    margin: 2px;
 }
